@@ -138,6 +138,7 @@ const stopFunction = (event) => {
 
 const closePopup = () => {
   formSummary.classList.add("hidden");
+  document.querySelector(".wrapper_form").classList.add("hidden");
 };
 formSummary.addEventListener("click", closePopup);
 form.onsubmit = (e) => {
