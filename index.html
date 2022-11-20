@@ -21,146 +21,148 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <h2>Order application</h2>
-      <form id="shim-form" action="">
-        <div class="form-summary"></div>
-        <div class="form-field">
-          <label class="label" for="name">Name</label>
-          <input
-            class="text-input"
-            type="text"
-            id="name"
-            name="user_name"
-            required
-          />
-          <span id="nameSpan" class="validation-msg"></span>
-        </div>
-        <div class="form-field">
-          <label class="label" for="name">Surname</label>
-          <input
-            class="text-input"
-            type="text"
-            id="Surname"
-            name="Surname"
-            required
-          />
-          <span id="SurnameSpan" class="validation-msg"></span>
-        </div>
-        <div class="form-field">
-          <label class="label" for="dob">Delivery date</label>
-          <input
-            class="text-input"
-            type="date"
-            name="user_dob"
-            id="dob"
-            required
-          />
-          <span id="dateSpan" class="validation-msg"></span>
-        </div>
-        <div class="location">
+    <div class="wrapper_form  " onclick="closeForm()">
+      <div class="container" onclick="showConsole(event)">
+        <h2>Order application</h2>
+        <form id="shim-form" action="">
+          <div class="form-summary"></div>
           <div class="form-field">
-            <label class="label" for="dob">Street </label>
+            <label class="label" for="name">Name</label>
             <input
-              minlength="5"
               class="text-input"
               type="text"
-              name="Street"
-              id="Street"
+              id="name"
+              name="user_name"
               required
             />
+            <span id="nameSpan" class="validation-msg"></span>
           </div>
           <div class="form-field">
-            <label class="label" for="dob">House number</label>
+            <label class="label" for="name">Surname</label>
             <input
-              min="1"
-              type="number"
               class="text-input"
-              name="House"
-              id="House"
-              required
-            />
-          </div>
-          <div class="form-field">
-            <label class="label" for="dob">Flat number</label>
-            <input
               type="text"
-              class="text-input"
-              name="Flat"
-              id="Flat"
-              pattern="[0-9\-]+"
-              title="Numbers only, poitive numbers only, the dash is allowed"
+              id="Surname"
+              name="Surname"
               required
             />
+            <span id="SurnameSpan" class="validation-msg"></span>
           </div>
-        </div>
-        <fieldset class="form-field">
-          <legend class="label">Payment type</legend>
-          <div class="payType">
-            <label class="toggle-input" for="flip_heads">
+          <div class="form-field">
+            <label class="label" for="dob">Delivery date</label>
+            <input
+              class="text-input"
+              type="date"
+              name="user_dob"
+              id="dob"
+              required
+            />
+            <span id="dateSpan" class="validation-msg"></span>
+          </div>
+          <div class="location">
+            <div class="form-field">
+              <label class="label" for="dob">Street </label>
               <input
-                type="radio"
-                name="flip"
-                id="flip_heads"
-                value="heads"
+                minlength="5"
+                class="text-input"
+                type="text"
+                name="Street"
+                id="Street"
+                required 
+              />
+            </div>
+            <div class="form-field">
+              <label class="label" for="dob">House number</label>
+              <input
+                min="1"
+                type="number"
+                class="text-input"
+                name="House"
+                id="House"
                 required
               />
-              Cash
-            </label>
-            <label class="toggle-input" for="flip_tails">
+            </div>
+            <div class="form-field">
+              <label class="label" for="dob">Flat number</label>
               <input
-                type="radio"
-                name="flip"
-                id="flip_tails"
-                value="tails"
+                type="text"
+                class="text-input"
+                name="Flat"
+                id="Flat"
+                pattern="[0-9\-]+"
+                title="Numbers only, poitive numbers only, the dash is allowed"
                 required
               />
-              Card
-            </label>
-            <span class="validation-msg"></span>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-field">
-          <legend class="label">Choose 2 gifts: (optional)</legend>
-          <label class="toggle-input" for="pack">
-            <input
-              type="checkbox"
-              name="gift"
-              id="pack"
-              value="pack as a gift"
-            />
-            pack as a gift
-          </label>
-          <label class="toggle-input" for="postcard">
-            <input
-              type="checkbox"
-              name="gift"
-              id="postcard"
-              value="add postcard"
-            />
-            add postcard
-          </label>
-          <label class="toggle-input" for="discount">
-            <input
-              type="checkbox"
-              name="gift"
-              id="discount"
-              value="provide 2% discount to the next time"
-            />
-            provide 2% discount to the next time
-          </label>
-          <label class="toggle-input" for="pen">
-            <input
-              type="checkbox"
-              name="gift"
-              id="pen"
-              value="branded pen or pencil"
-            />
-            branded pen or pencil
-          </label>
-        </fieldset>
-        <button class="button" type="submit">Complete</button>
-      </form>
+          <fieldset class="form-field">
+            <legend class="label">Payment type</legend>
+            <div class="payType">
+              <label class="toggle-input" for="flip_heads">
+                <input
+                  type="radio"
+                  name="flip"
+                  id="flip_heads"
+                  value="heads"
+                  required
+                />
+                Cash
+              </label>
+              <label class="toggle-input" for="flip_tails">
+                <input
+                  type="radio"
+                  name="flip"
+                  id="flip_tails"
+                  value="tails"
+                  required
+                />
+                Card
+              </label>
+              <span class="validation-msg"></span>
+            </div>
+          </fieldset>
+          <fieldset class="form-field">
+            <legend class="label">Choose 2 gifts: (optional)</legend>
+            <label class="toggle-input" for="pack">
+              <input
+                type="checkbox"
+                name="gift"
+                id="pack"
+                value="pack as a gift"
+              />
+              pack as a gift
+            </label>
+            <label class="toggle-input" for="postcard">
+              <input
+                type="checkbox"
+                name="gift"
+                id="postcard"
+                value="add postcard"
+              />
+              add postcard
+            </label>
+            <label class="toggle-input" for="discount">
+              <input
+                type="checkbox"
+                name="gift"
+                id="discount"
+                value="provide 2% discount to the next time"
+              />
+              provide 2% discount to the next time
+            </label>
+            <label class="toggle-input" for="pen">
+              <input
+                type="checkbox"
+                name="gift"
+                id="pen"
+                value="branded pen or pencil"
+              />
+              branded pen or pencil
+            </label>
+          </fieldset>
+          <button id="completeBtn" disabled="true" class="button" type="submit">Complete</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

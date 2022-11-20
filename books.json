@@ -27,6 +27,10 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
+                "listPrice": {
+                    "amount": 28,
+                    "currencyCode": "USD"
+                },
                 "isEbook": false
             },
             "accessInfo": {
@@ -79,7 +83,7 @@
                 "saleability": "FOR_SALE",
                 "isEbook": true,
                 "listPrice": {
-                    "amount": 179.95,
+                    "amount": 35,
                     "currencyCode": "USD"
                 },
                 "retailPrice": {
@@ -139,7 +143,11 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
-                "isEbook": false
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 64,
+                    "currencyCode": "USD"
+                }
             },
             "accessInfo": {
                 "country": "US",
@@ -247,7 +255,11 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
-                "isEbook": false
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 79.95,
+                    "currencyCode": "USD"
+                }
             },
             "accessInfo": {
                 "country": "US",
@@ -301,6 +313,10 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
+                "listPrice": {
+                    "amount": 109.95,
+                    "currencyCode": "USD"
+                },
                 "isEbook": false
             },
             "accessInfo": {
@@ -351,6 +367,10 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
+                "listPrice": {
+                    "amount": 179,
+                    "currencyCode": "USD"
+                },
                 "isEbook": false
             },
             "accessInfo": {
@@ -395,6 +415,10 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
+                "listPrice": {
+                    "amount": 100,
+                    "currencyCode": "USD"
+                },
                 "isEbook": false
             },
             "accessInfo": {
@@ -443,7 +467,7 @@
                 "saleability": "FOR_SALE",
                 "isEbook": true,
                 "listPrice": {
-                    "amount": 0.99,
+                    "amount": 78,
                     "currencyCode": "USD"
                 },
                 "retailPrice": {
@@ -494,6 +518,10 @@
             "saleInfo": {
                 "country": "US",
                 "saleability": "NOT_FOR_SALE",
+                "listPrice": {
+                    "amount": 170,
+                    "currencyCode": "USD"
+                },
                 "isEbook": false
             },
             "accessInfo": {

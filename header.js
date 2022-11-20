@@ -16,7 +16,7 @@ ul.innerHTML += ` <li><a href="#Home">Home</a></li>
 <li><a href="#Services">Services</a></li>
     <li><a href="#About">About</a></li>
     <li><a href="#Categories">Categories</a></li>
-    <li><a href="#Order">My Orders</a></li>`;
+    <li onclick="showCart()"><a href="#Order">My Orders</a></li>`;
 fragment.appendChild(ul);
 nav.append(fragment);
 section.append(nav);
