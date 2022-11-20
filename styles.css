@@ -23,7 +23,8 @@ html {
 .header nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 5rem;
 }
 
 .header nav .logo img {
@@ -55,7 +56,8 @@ main {
   background: #f5f2f2;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 5rem;
 }
 
 .main_tag {
@@ -89,7 +91,8 @@ main img {
   margin: 8rem auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 3rem;
 }
 
 .services_box .services_card {
@@ -114,13 +117,13 @@ main img {
 /* about */
 
 .about {
-  width: 95%;
+  width: 100%;
   margin: 8rem auto;
-  height: auto;
-  padding: 20px;
+  height: auto; 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 5rem;
 }
 
 .about_image {
@@ -148,7 +151,6 @@ main img {
 .arrivals {
   width: 100%;
   height: 100vh;
-  margin-bottom: 35px;
 }
 
 .arrivals h1 {
@@ -159,11 +161,14 @@ main img {
 }
 
 .arrivals .arrivals_box {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 25px 0;
+  grid-gap: 25px 0; 
+  padding: 0 5rem;
+  padding-bottom: 3rem;
+
 }
 
 .arrivals .arrivals_box .arrivals_card {
