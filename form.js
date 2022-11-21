@@ -149,7 +149,7 @@ form.onsubmit = (e) => {
   formSummary.classList.remove("hidden");
   formSummary.innerHTML = `<div class="selectedBookDiv" onClick="stopFunction(event)">
     <div class="arrivals_tag detailedPage_div">
-        <h3 class='detailedPage_tag'>Something</h3>
+        <h3 class='detailedPage_tag'>Personal information</h3>
         <p class='categorySpan'><span>Name : </span>${nameInput.value}</p>
         <p class='categorySpan'><span>Surname : </span> ${
           SurnameInput.value
