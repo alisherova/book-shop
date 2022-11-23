@@ -36,9 +36,13 @@ House.onchange = () => {
   enable();
 };
 
-let pattern = "[0-9-]+";
+let numPattern = "^[1-9]+[0-9]*$";
+let dashPattern = /^[-1-9–]+[-0-9–]*$/;
 function checkPattern() {
-  if (Flat.value.match(pattern)) return true;
+  if (Flat.value.match(dashPattern) &&  Flat.value.match(numPattern)) {
+    document.getElementById("flatSpan").textContent = " ";
+    return true;
+  } 
 }
 
 Flat.onchange = () => {
@@ -119,13 +123,13 @@ dateInput.onchange = () => {
 
 let checks = document.querySelectorAll("input[type='checkbox']");
 let max = 2;
-for (let i = 0; i < checks.length; i++)
-  checks[i].onclick = selectiveCheck
+for (let i = 0; i < checks.length; i++) checks[i].onclick = selectiveCheck;
 function selectiveCheck() {
   let checkedChecks = document.querySelectorAll(
     "input[type='checkbox']:checked"
   );
-  if (checkedChecks.length >= max + 1 || checkedChecks.length == 0) return false;
+  if (checkedChecks.length >= max + 1 || checkedChecks.length == 0)
+    return false;
   else if (checkedChecks.length == 2) return true;
 }
 

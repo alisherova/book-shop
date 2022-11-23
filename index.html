@@ -68,7 +68,7 @@
                 type="text"
                 name="Street"
                 id="Street"
-                required 
+                required
               />
             </div>
             <div class="form-field">
@@ -89,11 +89,12 @@
                 class="text-input"
                 name="Flat"
                 id="Flat"
-                pattern="[0-9\-]+"
+               
                 title="Numbers only, poitive numbers only, the dash is allowed"
                 required
               />
             </div>
+            <span id="flatSpan" class="validation-msg"></span>
           </div>
           <fieldset class="form-field">
             <legend class="label">Payment type</legend>
@@ -160,7 +161,9 @@
               branded pen or pencil
             </label>
           </fieldset>
-          <button id="completeBtn" disabled="true" class="button" type="submit">Complete</button>
+          <button id="completeBtn" disabled="true" class="button" type="submit">
+            Complete
+          </button>
         </form>
       </div>
     </div>
