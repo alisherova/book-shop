@@ -20,6 +20,9 @@ SurnameInput.onchange = () => {
 
 function checkLength() {
   if (Street.value.length > 5) return true;
+  else {
+    document.getElementById('Street').style.borderColor = 'crimson'
+  }
 }
 
 Street.onchange = () => {
@@ -29,6 +32,9 @@ Street.onchange = () => {
 
 function checkMin() {
   if (House.value > 1) return true;
+  else{
+    document.getElementById('House').style.borderColor = 'crimson'
+  }
 }
 
 House.onchange = () => {
@@ -42,7 +48,9 @@ function checkPattern() {
   if (Flat.value.match(dashPattern) &&  Flat.value.match(numPattern)) {
     document.getElementById("flatSpan").textContent = " ";
     return true;
-  } 
+  } else {
+    document.getElementById('Flat').style.borderColor = 'crimson'
+  }
 }
 
 Flat.onchange = () => {
@@ -73,14 +81,14 @@ function enable() {
     checkCashPayType() === true
   ) {
     document.getElementById("completeBtn").removeAttribute("disabled");
-  }
+  } 
 }
-
 function lettersAndSpaceCheck(idName, spanName) {
   let letter = /^[A-Za-z]+$/;
   if (nameInput.value.length < 4 && nameInput.value.match(letter)) {
     document.getElementById("nameSpan").textContent =
       "you should enter a least 4 letters";
+      document.getElementById(`${idName}`).style.borderColor = 'crimson'
     return false;
   } else if (
     SurnameInput.value.length < 5 &&
@@ -88,6 +96,7 @@ function lettersAndSpaceCheck(idName, spanName) {
   ) {
     document.getElementById("SurnameSpan").textContent =
       "you should enter a least 5 letters";
+      document.getElementById(`${idName}`).style.borderColor = 'crimson'
     return false;
   } else if (document.getElementById(`${idName}`).value.match(letter)) {
     document.getElementById(`${spanName}`).textContent = "";
@@ -96,6 +105,7 @@ function lettersAndSpaceCheck(idName, spanName) {
   } else {
     document.getElementById(`${spanName}`).textContent =
       "Please enter only letters without spaces";
+      document.getElementById(`${idName}`).style.borderColor = 'crimson'
     return false;
   }
 }
@@ -103,18 +113,29 @@ function lettersAndSpaceCheck(idName, spanName) {
 const dateInput = document.querySelector('input[type="date"]');
 function checkDate() {
   let n = new Date(dateInput.value);
-  let m = n.getDate() + 1;
   if (
-    n.getDate() == new Date().getDate() &&
-    n.getMonth() == new Date().getMonth() &&
-    n.getFullYear() == new Date().getFullYear()
+    n.getDate() <= new Date().getDate() &&
+    n.getMonth() <= new Date().getMonth() &&
+    n.getFullYear() <= new Date().getFullYear()
   ) {
     document.getElementById(
       "dateSpan"
-    ).textContent = `It can not be delivered earlier than ${m}/${n.getMonth()}/${n.getFullYear()}`;
+    ).textContent = 'Delivery is available from tomorrow date';
+    document.getElementById('dob').style.borderColor = 'crimson'
     return false;
-  } else if (dateInput.value === "") return false;
-  else return true;
+  } else if (dateInput.value === "") {
+    document.getElementById(
+      "dateSpan"
+    ).textContent = 'This field is required';
+    document.getElementById('dob').style.borderColor = 'crimson'
+    return false;
+  } 
+  else{
+    document.getElementById(
+      "dateSpan"
+    ).textContent = ' ';
+    return true
+  };
 }
 dateInput.onchange = () => {
   checkDate();

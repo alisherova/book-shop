@@ -373,6 +373,7 @@ input[type="radio"] {
 .text-input {
   background-color: #fff;
   border: 1px solid #ccc;
+  border-color: #ccc;
   border-radius: 5px;
   box-shadow: none;
   font-family: inherit; 
@@ -418,17 +419,17 @@ input[type="radio"] {
   background-color: white;
   color: #d66fbc;
 }
-
-.text-input[aria-invalid] {
-  border-color: #e63946;
-}
-
+ 
 .validation-msg:not(:empty) {
   color: #e63946;
 }
 
 .text-input[aria-invalid]:focus {
   box-shadow: 0 0 2px 0 #e63946;
+}
+
+input[type="radio"]:invalid{
+  border-color: #e63946;
 }
 
 .location {
