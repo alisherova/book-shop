@@ -42,15 +42,17 @@ House.onchange = () => {
   enable();
 };
 
-let numPattern = "^[1-9]+[0-9]*$";
-let dashPattern = /^[-1-9–]+[-0-9–]*$/;
+let pattern = /[0-9-]+/; 
 function checkPattern() {
-  if (Flat.value.match(dashPattern) &&  Flat.value.match(numPattern)) {
-    document.getElementById("flatSpan").textContent = " ";
-    return true;
-  } else {
+  if(Flat.value.at(0) === '-')  {
+    // document.getElementById("flatSpan").textContent =
+    // "Numbers only, poitive numbers only, the dash is allowed"
     document.getElementById('Flat').style.borderColor = 'crimson'
+    return false;
   }
+  if (Flat.value.match(pattern)) { 
+    return true;
+  } 
 }
 
 Flat.onchange = () => {

@@ -446,7 +446,7 @@ input[type="radio"]:invalid{
   justify-content: center;
   align-items: center;
   overflow: auto;
-}
+}  
 
 .form-summary {
   overflow: hidden !important;
